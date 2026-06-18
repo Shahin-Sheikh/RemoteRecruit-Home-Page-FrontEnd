@@ -73,21 +73,21 @@ function PlanCard({ plan }) {
 export default function Pricing() {
   return (
     <section id="pricing" className="relative overflow-hidden bg-white pt-16 sm:pt-20 lg:pt-24">
-      {/* Blue wash rising into the footer */}
+      {/* Blue wash rising into the footer (matches the footer gradient start) */}
       <div className="absolute inset-x-0 bottom-0 h-[42%]" aria-hidden="true">
         <svg viewBox="0 0 1440 220" preserveAspectRatio="none" className="h-full w-full">
-          <path fill="#2c5ba0" d="M0 60c280-70 560-70 840-20s440 60 600 20v160H0V60z" />
+          <path fill="#336DA6" d="M0 60c280-70 560-70 840-20s440 60 600 20v160H0V60z" />
         </svg>
       </div>
 
       <Container className="relative">
         <SectionReveal>
-          <h2 className="text-center text-3xl font-bold text-ink sm:text-4xl lg:text-[2.75rem]">
+          <h2 className="text-center font-semibold text-[#11142D] text-[32px] leading-[42px] sm:text-[40px] sm:leading-[52px]">
             Help Is One Click Away
           </h2>
         </SectionReveal>
 
-        <div className="mt-12 grid gap-7 md:grid-cols-2 lg:gap-9">
+        <div className="mx-auto mt-12 grid max-w-[1040px] gap-7 md:grid-cols-2 md:gap-10">
           {plans.map((plan, i) => (
             <SectionReveal key={plan.id} delay={i * 120} className="h-full">
               <PlanCard plan={plan} />

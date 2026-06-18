@@ -18,14 +18,20 @@ const SOCIALS = [
   { label: 'Snapchat', Icon: SnapchatIcon, href: '#' },
 ]
 
+// Exact Figma footer gradient (131.63deg, vertically flipped → 48.37deg).
 const footerBg = {
-  backgroundImage: 'linear-gradient(180deg, #2c5ba0 0%, #244e8f 55%, #1f3d78 100%)',
+  background: 'linear-gradient(48.37deg, #336DA6 6.87%, #1E3E85 106.04%)',
 }
 
 export default function Footer() {
   return (
-    <footer className="text-white" style={footerBg}>
-      <Container className="py-12 lg:py-16">
+    <footer className="relative overflow-hidden text-white" style={footerBg}>
+      {/* Faint white circle, top-right (Top Right Ellipses — 5% opacity) */}
+      <span
+        className="pointer-events-none absolute -top-[155px] left-[74%] h-[524px] w-[524px] rounded-full bg-white/[0.05]"
+        aria-hidden="true"
+      />
+      <Container className="relative py-12 lg:py-16">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <a href="#top" className="focus-ring rounded-lg" aria-label="RemoteRecruit home">
             <Logo className="h-14 w-auto" />
