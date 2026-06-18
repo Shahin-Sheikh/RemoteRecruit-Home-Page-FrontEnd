@@ -21,11 +21,11 @@ export default function HelpCTA() {
       <span className="pointer-events-none absolute bottom-16 right-1/4 h-6 w-6 rounded-full bg-brand-500" aria-hidden="true" />
 
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <SectionReveal delay={120} className="lg:order-1">
+        <SectionReveal delay={120}>
           <JobBoardMockup />
         </SectionReveal>
 
-        <SectionReveal className="lg:order-2">
+        <SectionReveal>
           <p className="text-sm font-bold uppercase tracking-wide text-royal-600">
             Are you ready?
           </p>

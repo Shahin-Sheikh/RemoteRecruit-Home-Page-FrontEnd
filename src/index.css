@@ -43,6 +43,10 @@
     transition:
       opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  /* Hint the compositor only while the element is still waiting to animate;
+     drops automatically once it settles to avoid a permanent memory cost. */
+  .reveal:not(.is-visible) {
     will-change: opacity, transform;
   }
   .reveal.is-visible {

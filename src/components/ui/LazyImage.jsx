@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 /**
  * Image wrapper that lazy-loads off-screen images. Uses the browser's native
@@ -15,6 +15,13 @@ export default function LazyImage({
   ...rest
 }) {
   const [loaded, setLoaded] = useState(false)
+  const imgRef = useRef(null)
+
+  // Cached/already-complete images may finish before React attaches onLoad,
+  // which would otherwise leave the skeleton up and the image at opacity-0.
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true)
+  }, [src])
 
   return (
     <span
@@ -25,6 +32,7 @@ export default function LazyImage({
         <span className="absolute inset-0 animate-pulse bg-royal-50" aria-hidden="true" />
       )}
       <img
+        ref={imgRef}
         src={src}
         alt={alt}
         width={width}
@@ -32,6 +40,7 @@ export default function LazyImage({
         loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
         className={`transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         {...rest}
       />

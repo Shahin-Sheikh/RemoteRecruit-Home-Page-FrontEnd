@@ -19,13 +19,22 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts: preconnect + display=swap keeps text rendering non-blocking -->
+    <!-- Fonts: preconnect + async (preload-then-swap) so the stylesheet never
+         blocks first paint; only the weights actually used are requested. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <title>RemoteRecruit — The First Fully Global Job Board</title>
 
