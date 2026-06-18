@@ -93,15 +93,18 @@ export default function ShowcaseVisual() {
         </div>
       </div>
 
-      {/* Large floating avatar */}
-      <LazyImage
-        src="/avatars/dylan.svg"
-        alt=""
-        width={72}
-        height={72}
-        wrapperClassName="absolute -right-5 top-32 h-[72px] w-[72px] rounded-full ring-4 ring-white shadow-card animate-float [animation-delay:1s]"
-        className="h-[72px] w-[72px] rounded-full object-cover"
-      />
+      {/* Large floating avatar (outer span owns the absolute positioning so it
+          doesn't collide with LazyImage's own `relative` wrapper) */}
+      <span className="absolute -right-5 top-28 h-[72px] w-[72px] animate-float rounded-full shadow-card ring-4 ring-white [animation-delay:1s]">
+        <LazyImage
+          src="/avatars/dylan.svg"
+          alt=""
+          width={72}
+          height={72}
+          wrapperClassName="h-full w-full rounded-full"
+          className="h-[72px] w-[72px] rounded-full object-cover"
+        />
+      </span>
     </div>
   )
 }
