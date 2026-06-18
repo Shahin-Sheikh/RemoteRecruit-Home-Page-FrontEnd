@@ -31,7 +31,7 @@ function PersonCard({ role, name, avatar, className = '' }) {
 export default function GlobalReachVisual() {
   const tabs = ['UI/UX', 'Front End', 'Back End', 'Data Science', 'Sales']
   return (
-    <div className="relative mx-auto w-full max-w-md">
+    <div className="relative mx-auto w-full max-w-md" aria-hidden="true">
       {/* Main dashboard panel */}
       <div className="rounded-3xl bg-white p-5 shadow-card ring-1 ring-black/5">
         <div className="flex items-start justify-between">

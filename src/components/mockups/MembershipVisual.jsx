@@ -16,7 +16,7 @@ const FEATURES = [
  */
 export default function MembershipVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-sm pb-12">
+    <div className="relative mx-auto w-full max-w-sm pb-12" aria-hidden="true">
       <div className="rounded-3xl bg-white p-7 shadow-card ring-1 ring-black/5">
         <p className="text-xs font-medium text-body">Your Membership Tier</p>
         <p className="text-2xl font-bold text-brand-500">Premium</p>

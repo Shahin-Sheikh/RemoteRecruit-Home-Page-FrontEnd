@@ -48,7 +48,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/15 pt-10">
           <Monogram className="h-11 w-11 text-lg" />
-          <p className="text-xs text-white/60">
+          <p className="text-xs text-white/75">
             &copy; {2024} RemoteRecruit. All rights reserved.
           </p>
         </div>

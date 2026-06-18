@@ -17,7 +17,10 @@ const FILTERS = [
  */
 export default function JobBoardMockup() {
   return (
-    <div className="overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-black/5">
+    <div
+      className="overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-black/5"
+      aria-hidden="true"
+    >
       <div className="flex">
         {/* Sidebar */}
         <aside className="hidden w-32 shrink-0 flex-col bg-royal-800 p-4 text-white sm:flex">

@@ -9,7 +9,7 @@ const SKILLS = ['Python Dev', 'Javascript', 'Front End', 'Back End', 'IOS Develo
  */
 export default function ShowcaseVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-md pb-16">
+    <div className="relative mx-auto w-full max-w-md pb-16" aria-hidden="true">
       <div className="rounded-3xl bg-white p-5 shadow-card ring-1 ring-black/5">
         {/* Stats banner */}
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-royal-700 to-royal-500 p-4">
