@@ -38,17 +38,17 @@ export default function Hero() {
         </SectionReveal>
       </Container>
 
-      {/* White wave divider — gentle hump cresting ~48%. Fixed height (not vw)
-          so it stays consistent across monitor widths. */}
+      {/* White wave divider — low on the left, rising to a crest on the right
+          (~73%), matching the Figma. Fixed height so it's width-independent. */}
       <svg
-        className="absolute inset-x-0 bottom-[-1px] h-[150px] w-full sm:h-[185px] lg:h-[210px]"
+        className="absolute inset-x-0 bottom-[-1px] h-[140px] w-full sm:h-[175px] lg:h-[200px]"
         viewBox="0 0 1440 216"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
         <path
           fill="#ffffff"
-          d="M0 216V120C240 116 460 30 660 26C920 21 1200 70 1440 92V216H0Z"
+          d="M0 216V148C380 144 760 58 1050 24C1240 33 1360 45 1440 54V216H0Z"
         />
       </svg>
 
