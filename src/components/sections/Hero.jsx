@@ -41,7 +41,16 @@ export default function Hero() {
         </SectionReveal>
       </Container>
 
-      {/* White wave divider — low on the left, rising to a crest on the right */}
+      {/* Light-Blue gradient layer (BEHIND the wave) — a smooth flowing
+          ellipse that shows as a bright cyan crescent above the white wave.
+          Frame-relative gradient. */}
+      <div
+        className="pointer-events-none absolute inset-0 [clip-path:ellipse(72%_44%_at_-4%_106%)] lg:[clip-path:ellipse(56%_48%_at_2%_108%)]"
+        style={lightBlueBg}
+        aria-hidden="true"
+      />
+
+      {/* White wave divider (ON TOP) — low on the left, rising to a crest on the right */}
       <svg
         className="absolute inset-x-0 bottom-[-1px] h-[140px] w-full sm:h-[175px] lg:h-[200px]"
         viewBox="0 0 1440 216"
@@ -53,14 +62,6 @@ export default function Hero() {
           d="M0 216V148C380 144 760 58 1050 24C1240 33 1360 45 1440 54V216H0Z"
         />
       </svg>
-
-      {/* Light-Blue gradient layer, clipped to a tilted ellipse so the
-          bottom-left cyan reads as a flowing curve (frame-relative gradient). */}
-      <div
-        className="pointer-events-none absolute inset-0 origin-bottom-left rotate-[18deg] [clip-path:ellipse(48%_50%_at_-4%_118%)] lg:rotate-[14deg] lg:[clip-path:ellipse(40%_56%_at_-2%_120%)]"
-        style={lightBlueBg}
-        aria-hidden="true"
-      />
     </section>
   )
 }
