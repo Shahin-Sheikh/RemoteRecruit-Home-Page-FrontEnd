@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <a
-        href="#global-reach"
+        href="#main-content"
         className="focus-ring sr-only z-[60] rounded-lg bg-white px-4 py-2 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
         Skip to content
@@ -21,7 +21,7 @@ export default function App() {
 
       <Navbar />
 
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <Hero />
         <GlobalReach />
         <FeeFree />

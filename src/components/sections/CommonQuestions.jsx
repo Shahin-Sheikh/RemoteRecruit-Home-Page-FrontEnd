@@ -5,7 +5,7 @@ import SectionReveal from '../ui/SectionReveal'
 import { faqs } from '../../data/faq'
 
 /** Single accessible accordion item. */
-function FaqItem({ item, isOpen, onToggle, index }) {
+function FaqItem({ item, isOpen, onToggle }) {
   const panelId = `faq-panel-${item.id}`
   const buttonId = `faq-button-${item.id}`
   return (
@@ -36,6 +36,7 @@ function FaqItem({ item, isOpen, onToggle, index }) {
         id={panelId}
         role="region"
         aria-labelledby={buttonId}
+        aria-hidden={!isOpen}
         className={`grid transition-all duration-300 ease-out ${
           isOpen ? 'mt-4 grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
         }`}
@@ -65,11 +66,10 @@ export default function CommonQuestions() {
 
         <SectionReveal delay={100} className="mt-8">
           <div className="border-t border-black/10">
-            {faqs.map((item, i) => (
+            {faqs.map((item) => (
               <FaqItem
                 key={item.id}
                 item={item}
-                index={i}
                 isOpen={openId === item.id}
                 onToggle={() => setOpenId(openId === item.id ? null : item.id)}
               />

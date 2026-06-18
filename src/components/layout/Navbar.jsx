@@ -19,7 +19,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    let ticking = false
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 24)
+        ticking = false
+      })
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -78,7 +86,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden bg-royal-900/95 backdrop-blur transition-[max-height] duration-300 md:hidden ${
-          open ? 'max-h-80' : 'max-h-0'
+          open ? 'max-h-[32rem]' : 'max-h-0'
         }`}
       >
         <Container className="flex flex-col gap-2 pb-6 pt-2">

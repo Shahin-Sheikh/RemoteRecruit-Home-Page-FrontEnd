@@ -8,6 +8,7 @@ import { plans } from '../../data/pricing'
 function PlanCard({ plan }) {
   return (
     <div className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-black/5 sm:p-9">
+      <h3 className="sr-only">{plan.name} plan</h3>
       <div className="flex flex-col gap-7 sm:flex-row sm:items-stretch sm:gap-6">
         {/* Price / name block */}
         <div
@@ -25,12 +26,12 @@ function PlanCard({ plan }) {
           )}
           {plan.price ? (
             <>
-              <p className="text-3xl font-bold text-brand-500">{plan.price.amount}</p>
+              <p className="text-3xl font-bold text-brand-700">{plan.price.amount}</p>
               <p className="text-sm font-medium text-body">{plan.price.cadence}</p>
             </>
           ) : (
             <>
-              <p className="text-3xl font-bold text-brand-500">{plan.name}</p>
+              <p className="text-3xl font-bold text-brand-700">{plan.name}</p>
               <p className="text-sm font-medium text-body">{plan.tier}</p>
             </>
           )}

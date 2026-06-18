@@ -37,7 +37,7 @@ export default function Footer() {
                 <a
                   href={href}
                   aria-label={label}
-                  className="focus-ring flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/30"
+                  className="focus-ring flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/30"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/15 pt-10">
           <Monogram className="h-11 w-11 text-lg" />
           <p className="text-xs text-white/75">
-            &copy; {2024} RemoteRecruit. All rights reserved.
+            &copy; {new Date().getFullYear()} RemoteRecruit. All rights reserved.
           </p>
         </div>
       </Container>

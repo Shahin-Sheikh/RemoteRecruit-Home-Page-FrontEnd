@@ -8,7 +8,7 @@ import SectionReveal from '../ui/SectionReveal'
  */
 export default function FeatureRow({ id, badge, title, children, visual, reverse = false }) {
   return (
-    <section id={id} className="py-16 sm:py-20 lg:py-28">
+    <section id={id} className="overflow-x-clip py-16 sm:py-20 lg:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Copy */}
         <SectionReveal className={reverse ? 'lg:order-2' : ''}>

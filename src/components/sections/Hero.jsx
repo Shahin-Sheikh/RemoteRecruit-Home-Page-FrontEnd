@@ -20,14 +20,14 @@ export default function Hero() {
       <span className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-white/5 blur-2xl" aria-hidden="true" />
       <span className="pointer-events-none absolute right-10 top-1/3 h-40 w-40 rounded-full bg-brand-300/10 blur-2xl" aria-hidden="true" />
 
-      <Container className="relative flex min-h-[88vh] flex-col items-center justify-center pb-40 pt-36 text-center sm:pb-48 lg:min-h-[92vh]">
-        <SectionReveal>
+      <Container className="relative flex min-h-[600px] flex-col items-center justify-center pb-32 pt-32 text-center sm:min-h-[88vh] sm:pb-48 sm:pt-36 lg:min-h-[92vh]">
+        <SectionReveal immediate>
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.75rem]">
             RemoteRecruit&rsquo;s Difference
           </h1>
         </SectionReveal>
 
-        <SectionReveal delay={120}>
+        <SectionReveal immediate>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:text-lg">
             RemoteRecruit is connecting the world with an easy-to-use platform that lets
             full-time, part-time, and freelance workers showcase their talents to businesses
