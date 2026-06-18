@@ -1,25 +1,28 @@
 import Container from '../ui/Container'
 import SectionReveal from '../ui/SectionReveal'
 
-// Royal/cobalt-blue hero gradient sampled from the Figma background (1440×704).
-const heroBackground = {
-  backgroundImage: [
-    'radial-gradient(68% 55% at 55% 26%, rgba(86,134,205,0.30) 0%, rgba(86,134,205,0) 60%)',
-    'linear-gradient(160deg, #243c88 0%, #2c4f9b 50%, #335ca6 100%)',
-  ].join(', '),
+// Exact Figma background gradients (both are full-frame 1440×704 layers).
+const darkBlueBg = {
+  background: 'linear-gradient(131.63deg, #1E3E85 6.87%, #336DA6 106.04%)',
+}
+const lightBlueBg = {
+  background: 'linear-gradient(132.56deg, #52B4DA 5.63%, #1E3E85 106.18%)',
 }
 
 /**
- * Hero — "RemoteRecruit's Difference". Royal-blue gradient with faint orbs, a
- * gentle white wave cresting centre-right, and a brighter blue circle layered
- * over the wave at the bottom-left (matching the Figma).
+ * Hero — "RemoteRecruit's Difference".
+ *
+ * Composition matches the Figma: a full-frame Dark-Blue gradient, with a
+ * full-frame Light-Blue gradient layered on top but clipped to the bottom-left
+ * circle (so the bright cyan is sampled from the frame, not the circle's own
+ * box). A white wave divides into the next section.
  */
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden" style={heroBackground}>
-      {/* Faint decorative discs (subtle, so they don't compete with the wave) */}
-      <span className="pointer-events-none absolute -left-40 -top-32 h-[440px] w-[440px] rounded-full bg-white/[0.04]" aria-hidden="true" />
-      <span className="pointer-events-none absolute -right-24 top-[24%] h-[460px] w-[460px] rounded-full bg-white/[0.035]" aria-hidden="true" />
+    <section id="top" className="relative overflow-hidden" style={darkBlueBg}>
+      {/* Faint decorative discs */}
+      <span className="pointer-events-none absolute -left-40 -top-32 h-[440px] w-[440px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -right-24 top-[24%] h-[460px] w-[460px] rounded-full bg-white/[0.04]" aria-hidden="true" />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col items-center justify-center pb-36 pt-32 text-center sm:min-h-[680px] sm:pb-48 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
@@ -38,8 +41,7 @@ export default function Hero() {
         </SectionReveal>
       </Container>
 
-      {/* White wave divider — low on the left, rising to a crest on the right
-          (~73%), matching the Figma. Fixed height so it's width-independent. */}
+      {/* White wave divider — low on the left, rising to a crest on the right */}
       <svg
         className="absolute inset-x-0 bottom-[-1px] h-[140px] w-full sm:h-[175px] lg:h-[200px]"
         viewBox="0 0 1440 216"
@@ -52,11 +54,11 @@ export default function Hero() {
         />
       </svg>
 
-      {/* Brighter blue circle layered over the wave at the bottom-left. Its arc
-          forms the whole left half of the bottom curve (matches Figma). Large
-          on desktop, modest on mobile. */}
-      <span
-        className="pointer-events-none absolute -bottom-32 -left-32 h-[380px] w-[380px] rounded-full bg-gradient-to-bl from-[#1f5499] to-[#3a97d4] lg:-bottom-[486px] lg:-left-[330px] lg:h-[780px] lg:w-[780px]"
+      {/* Light-Blue gradient layer, clipped to the bottom-left circle and laid
+          over the wave (the bright cyan is sampled frame-relative). */}
+      <div
+        className="pointer-events-none absolute inset-0 [clip-path:circle(270px_at_30px_560px)] lg:[clip-path:circle(400px_at_70px_792px)]"
+        style={lightBlueBg}
         aria-hidden="true"
       />
     </section>
