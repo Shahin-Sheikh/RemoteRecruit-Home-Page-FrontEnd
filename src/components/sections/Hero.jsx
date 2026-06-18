@@ -1,11 +1,11 @@
 import Container from '../ui/Container'
 import SectionReveal from '../ui/SectionReveal'
 
-// Royal-blue hero gradient sampled from the Figma background (1440×704).
+// Royal/cobalt-blue hero gradient sampled from the Figma background (1440×704).
 const heroBackground = {
   backgroundImage: [
-    'radial-gradient(60% 55% at 50% 16%, rgba(92,118,205,0.38) 0%, rgba(92,118,205,0) 60%)',
-    'linear-gradient(158deg, #283890 0%, #31499f 52%, #345aa6 100%)',
+    'radial-gradient(70% 55% at 50% 34%, rgba(82,130,200,0.30) 0%, rgba(82,130,200,0) 60%)',
+    'linear-gradient(160deg, #243c88 0%, #2c4f9b 50%, #335ca6 100%)',
   ].join(', '),
 }
 
@@ -17,9 +17,9 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={heroBackground}>
       {/* Decorative orbs (match the Figma circles) */}
-      <span className="pointer-events-none absolute -left-28 -top-28 h-[440px] w-[440px] rounded-full bg-white/[0.05]" aria-hidden="true" />
-      <span className="pointer-events-none absolute bottom-[-32%] left-1/2 h-[720px] w-[720px] -translate-x-1/2 rounded-full bg-[#4163ad]/25" aria-hidden="true" />
-      <span className="pointer-events-none absolute -left-24 bottom-[-12%] h-80 w-80 rounded-full bg-[#2f72b0]/35 blur-[1px]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -left-40 -top-32 h-[480px] w-[480px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -right-40 top-8 h-[640px] w-[640px] rounded-full bg-white/[0.035]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -left-20 bottom-[-12%] h-[400px] w-[400px] rounded-full bg-[#2f73b6]/45 blur-[1px]" aria-hidden="true" />
 
       <Container className="relative flex min-h-[600px] flex-col items-center justify-center pb-32 pt-32 text-center sm:min-h-[680px] sm:pb-44 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
