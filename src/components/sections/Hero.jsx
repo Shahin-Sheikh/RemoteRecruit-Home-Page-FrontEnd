@@ -52,10 +52,11 @@ export default function Hero() {
         />
       </svg>
 
-      {/* Brighter blue circle layered over the wave at the bottom-left.
-          Large on desktop (matches Figma), modest on mobile. */}
+      {/* Brighter blue circle layered over the wave at the bottom-left. Its arc
+          forms the whole left half of the bottom curve (matches Figma). Large
+          on desktop, modest on mobile. */}
       <span
-        className="pointer-events-none absolute -bottom-24 -left-24 h-[320px] w-[320px] rounded-full bg-gradient-to-tr from-[#3a93d0] to-[#1e5aa3] lg:-bottom-[340px] lg:-left-[230px] lg:h-[600px] lg:w-[600px]"
+        className="pointer-events-none absolute -bottom-40 -left-40 h-[440px] w-[440px] rounded-full bg-gradient-to-bl from-[#1f5499] to-[#3a97d4] lg:-bottom-[686px] lg:-left-[420px] lg:h-[1020px] lg:w-[1020px]"
         aria-hidden="true"
       />
     </section>
