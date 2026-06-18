@@ -79,10 +79,10 @@ function PlanCard({ plan }) {
 export default function Pricing() {
   return (
     <section id="pricing" className="relative overflow-hidden bg-white pt-16 sm:pt-20 lg:pt-24">
-      {/* Blue wash rising into the footer (matches the footer gradient start) */}
-      <div className="absolute inset-x-0 bottom-0 h-[42%]" aria-hidden="true">
-        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" className="h-full w-full">
-          <path fill="#336DA6" d="M0 60c280-70 560-70 840-20s440 60 600 20v160H0V60z" />
+      {/* Blue wash rising behind the lower half of the cards, into the footer */}
+      <div className="absolute inset-x-0 bottom-0 h-[58%]" aria-hidden="true">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="h-full w-full">
+          <path fill="#336DA6" d="M0 90C380 66 820 54 1120 56C1280 57 1370 66 1440 76V320H0V90Z" />
         </svg>
       </div>
 
