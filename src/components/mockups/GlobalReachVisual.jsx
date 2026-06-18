@@ -5,7 +5,7 @@ import { Monogram } from '../ui/Logo'
 function PersonCard({ role, name, className = '' }) {
   return (
     <div
-      className={`flex items-center gap-4 rounded-[20px] bg-white p-3 pr-6 shadow-card ring-1 ring-black/5 ${className}`}
+      className={`flex items-center gap-4 rounded-full w-full h-[90px] bg-white p-3 pr-6 shadow-card ring-1 ring-black/5 ${className}`}
     >
       <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-400">
         <img
@@ -35,31 +35,32 @@ export default function GlobalReachVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md pb-2" aria-hidden="true">
       {/* White card: dashboard cover on top, white space below */}
-      <div className="overflow-hidden rounded-[28px] bg-white shadow-card ring-1 ring-black/5">
+      <div className="overflow-hidden p-6 rounded-[28px] bg-white shadow-card ring-1 ring-black/5">
         <LazyImage
           src="/avatars/help_image.webp"
           alt=""
           width={940}
           height={1066}
           wrapperClassName="block aspect-[16/10] w-full"
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-top rounded-[20px]"
         />
-        <div className="h-44 w-full bg-white" />
+        <div className="h-[300px] w-[451px] bg-white" />
       </div>
+      <span className="absolute left-[-8%] -top-1 z-10 h-[22px] w-[22px] rounded-full bg-gradient-to-br from-brand-400 to-royal-600 shadow-md" />
 
       {/* Brand monogram on the right edge */}
-      <Monogram className="absolute -right-4 top-[30%] h-[88px] w-[88px] drop-shadow-lg" />
+      <Monogram className="absolute -right-4 top-[40%] h-[91px] w-[91px] drop-shadow-lg" />
 
       {/* Floating candidate cards overlapping the dashboard / white boundary */}
       <PersonCard
         role="Python Developer"
         name="Felonious Gru"
-        className="absolute -left-5 top-[46%] w-[92%] animate-float"
+        className="absolute -left-20 top-[55%] "
       />
       <PersonCard
         role="Front End Wizard"
         name="Mel Muselphiem"
-        className="absolute -bottom-3 right-0 w-[88%] animate-float [animation-delay:1.5s]"
+        className="absolute bottom-10 left-20"
       />
     </div>
   )

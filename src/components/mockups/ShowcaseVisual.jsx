@@ -12,23 +12,23 @@ export default function ShowcaseVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md pb-6" aria-hidden="true">
       {/* Accent dot */}
-      <span className="absolute left-4 -top-1 z-10 h-[18px] w-[18px] rounded-full bg-gradient-to-br from-brand-400 to-royal-600 shadow-md" />
+      <span className="absolute left-[-8%] -top-1 z-10 h-[22px] w-[22px] rounded-full bg-gradient-to-br from-brand-400 to-royal-600 shadow-md" />
 
       {/* White card: profile image on top, white space below for tags */}
-      <div className="overflow-hidden rounded-[28px] bg-white shadow-card ring-1 ring-black/5">
+      <div className="overflow-hidden rounded-[28px] p-6 bg-white shadow-card ring-1 ring-black/5">
         <LazyImage
           src="/avatars/showcase_image.webp"
           alt=""
           width={940}
           height={913}
           wrapperClassName="block aspect-[10/9] w-full"
-          className="h-full w-full object-cover object-top"
+          className="h-[290px] w-full rounded-lg object-cover object-top"
         />
         <div className="h-32 w-full bg-white" />
       </div>
 
       {/* Intro-video play button over the profile */}
-      <span className="absolute left-[56%] top-[24%] flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(82,180,218,0.5)] text-white shadow-lg backdrop-blur-sm">
+      <span className="absolute left-[45%] top-[24%] flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(82,180,218,0.5)] text-white shadow-lg backdrop-blur-sm">
         <PlayIcon className="h-5 w-5" />
       </span>
 
@@ -46,7 +46,7 @@ export default function ShowcaseVisual() {
       </span>
 
       {/* Floating "Past Client Feedback" card */}
-      <div className="absolute left-[-4%] top-[48%] flex w-[70%] items-center gap-3 rounded-[20px] bg-white p-3 shadow-card ring-1 ring-black/5 animate-float">
+      <div className="absolute left-[-15%] top-[62%] flex w-[355px] h-[73px] items-center gap-3 rounded-full bg-white p-3 shadow-card ring-1 ring-black/5">
         <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-400">
           <img
             src="/avatars/avatar.webp"
@@ -65,7 +65,7 @@ export default function ShowcaseVisual() {
       </div>
 
       {/* Skill tags on the white area */}
-      <div className="absolute inset-x-7 bottom-7 flex flex-wrap gap-2.5">
+      <div className="absolute inset-x-7 bottom-11 flex flex-wrap gap-2.5">
         {SKILLS.map((s) => (
           <span
             key={s}

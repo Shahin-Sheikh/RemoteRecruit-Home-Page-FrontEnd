@@ -54,9 +54,6 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/15 pt-10">
           <Monogram className="h-12 w-12 drop-shadow-md" />
-          <p className="text-xs text-white/75">
-            &copy; {new Date().getFullYear()} RemoteRecruit. All rights reserved.
-          </p>
         </div>
       </Container>
     </footer>
