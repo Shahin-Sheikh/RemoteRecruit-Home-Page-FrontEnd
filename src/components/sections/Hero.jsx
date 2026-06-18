@@ -38,16 +38,17 @@ export default function Hero() {
         </SectionReveal>
       </Container>
 
-      {/* White wave divider — gentle hump cresting left-of-centre (~44%) */}
+      {/* White wave divider — gentle hump cresting ~48%. Fixed height (not vw)
+          so it stays consistent across monitor widths. */}
       <svg
-        className="absolute inset-x-0 bottom-[-1px] h-[15vw] min-h-[130px] w-full"
+        className="absolute inset-x-0 bottom-[-1px] h-[150px] w-full sm:h-[185px] lg:h-[210px]"
         viewBox="0 0 1440 216"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
         <path
           fill="#ffffff"
-          d="M0 216V128C200 124 430 20 630 14C920 6 1210 84 1440 122V216H0Z"
+          d="M0 216V128C200 124 470 24 690 18C960 8 1230 86 1440 122V216H0Z"
         />
       </svg>
 
