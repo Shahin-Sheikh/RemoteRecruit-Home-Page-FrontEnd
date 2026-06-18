@@ -20,19 +20,19 @@ const lightBlueBg = {
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={darkBlueBg}>
-      {/* Faint decorative circles (Top Ellipses 2% / Bottom Ellipses 5%) */}
-      <span className="pointer-events-none absolute -left-[6px] -top-[367px] h-[524px] w-[524px] rounded-full bg-white/[0.02]" aria-hidden="true" />
-      <span className="pointer-events-none absolute left-[44%] top-[53%] h-[524px] w-[524px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      {/* Faint decorative discs */}
+      <span className="pointer-events-none absolute -left-40 -top-32 h-[440px] w-[440px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -right-24 top-[24%] h-[460px] w-[460px] rounded-full bg-white/[0.04]" aria-hidden="true" />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col items-center justify-center pb-36 pt-32 text-center sm:min-h-[680px] sm:pb-48 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
-          <h1 className="mx-auto max-w-4xl font-bold text-white text-[36px] leading-[44px] sm:text-[44px] sm:leading-[56px] lg:text-[53px] lg:leading-[68px]">
+          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.75rem]">
             RemoteRecruit&rsquo;s Difference
           </h1>
         </SectionReveal>
 
         <SectionReveal immediate>
-          <p className="mx-auto mt-6 max-w-[800px] font-medium text-white/80 text-[17px] leading-[28px] sm:text-[20px] sm:leading-[32px]">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
             RemoteRecruit is connecting the world with an easy-to-use platform that lets
             full-time, part-time, and freelance workers showcase their talents to businesses
             that need them. With no paywalls, no fees, and no barriers, there&rsquo;s nothing but
@@ -54,11 +54,10 @@ export default function Hero() {
         />
       </svg>
 
- 
-      {/* Light-Blue gradient layer, clipped to the bottom-left circle and laid
-          over the wave (the bright cyan is sampled frame-relative). */}
+      {/* Light-Blue gradient layer, clipped to a tilted ellipse so the
+          bottom-left cyan reads as a flowing curve (frame-relative gradient). */}
       <div
-        className="pointer-events-none absolute inset-0 [clip-path:circle(270px_at_30px_560px)] lg:[clip-path:circle(400px_at_70px_792px)]"
+        className="pointer-events-none absolute inset-0 origin-bottom-left rotate-[18deg] [clip-path:ellipse(48%_50%_at_-4%_118%)] lg:rotate-[14deg] lg:[clip-path:ellipse(40%_56%_at_-2%_120%)]"
         style={lightBlueBg}
         aria-hidden="true"
       />
