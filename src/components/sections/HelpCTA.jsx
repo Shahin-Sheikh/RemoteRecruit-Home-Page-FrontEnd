@@ -16,11 +16,14 @@ const bg = {
 export default function HelpCTA() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:h-[610px] lg:py-0" style={bg}>
-      {/* Soft white circles (Ellipse 13 / 12 / 10) — kept subtle so the
-          blue→purple gradient still reads true */}
-      <span className="pointer-events-none absolute -left-[85px] -top-[92px] h-[321px] w-[321px] rounded-full bg-white/[0.16]" aria-hidden="true" />
-      <span className="pointer-events-none absolute left-[20%] top-1/2 h-[493px] w-[493px] rounded-full bg-white/[0.16]" aria-hidden="true" />
-      <span className="pointer-events-none absolute -top-[138px] left-[81%] h-[380px] w-[380px] rounded-full bg-white/[0.16]" aria-hidden="true" />
+      {/* White wash so the blue→purple gradient renders as the Figma's pale
+          lavender (the design's white overlays lighten it heavily). */}
+      <span className="pointer-events-none absolute inset-0 bg-white/[0.82]" aria-hidden="true" />
+
+      {/* Faint highlight circles (subtle lighter patches on the pale field) */}
+      <span className="pointer-events-none absolute -left-[85px] -top-[92px] h-[321px] w-[321px] rounded-full bg-white/40" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[20%] top-1/2 h-[493px] w-[493px] rounded-full bg-white/30" aria-hidden="true" />
+      <span className="pointer-events-none absolute -top-[138px] left-[81%] h-[380px] w-[380px] rounded-full bg-white/40" aria-hidden="true" />
 
       {/* Accent orbs: yellow→orange (Ellipse 49) and blue (Ellipse 51) */}
       <span className="pointer-events-none absolute left-[18%] top-7 z-20 h-[53px] w-[53px] rounded-full bg-[linear-gradient(132.56deg,#FFED43_5.63%,#F29939_106.18%)] shadow-md" aria-hidden="true" />
