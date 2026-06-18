@@ -32,7 +32,7 @@ export default function Footer() {
         className="pointer-events-none absolute -top-[155px] left-[74%] h-[524px] w-[524px] rounded-full bg-white/[0.05]"
         aria-hidden="true"
       />
-      <Container className="relative pb-12 pt-16 lg:pt-20">
+      <Container className="relative pb-12 pt-10 lg:pt-12">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <a href="#top" className="focus-ring rounded-lg" aria-label="RemoteRecruit home">
             <Logo className="h-14 w-auto" />

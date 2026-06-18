@@ -101,7 +101,7 @@ export default function Pricing() {
         </div>
 
         {/* Spacer so cards clear the wave before the footer */}
-        <div className="h-24 sm:h-28" />
+        <div className="h-10 sm:h-12" />
       </Container>
     </section>
   )
