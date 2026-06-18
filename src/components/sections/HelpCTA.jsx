@@ -3,11 +3,9 @@ import SectionReveal from '../ui/SectionReveal'
 import LazyImage from '../ui/LazyImage'
 import { ArrowRightIcon } from '../ui/icons'
 
+// Exact Figma background: blue→purple gradient (Rectangle 14).
 const bg = {
-  backgroundImage: [
-    'radial-gradient(55% 60% at 88% 18%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 60%)',
-    'linear-gradient(120deg, #eef0fb 0%, #eaeafb 100%)',
-  ].join(', '),
+  background: 'linear-gradient(132.56deg, #5799EB 5.63%, #9F74FB 106.18%)',
 }
 
 /**
@@ -18,10 +16,14 @@ const bg = {
 export default function HelpCTA() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:h-[610px] lg:py-0" style={bg}>
-      {/* Decorative orbs */}
-      <span className="pointer-events-none absolute -right-24 -top-10 h-[440px] w-[440px] rounded-full bg-white/40" aria-hidden="true" />
-      <span className="pointer-events-none absolute left-[24%] top-6 z-20 h-12 w-12 rounded-full bg-amber-400 shadow-md lg:left-[20%]" aria-hidden="true" />
-      <span className="pointer-events-none absolute bottom-24 right-[24%] h-7 w-7 rounded-full bg-gradient-to-br from-[#52B4DA] to-[#1E3E85]" aria-hidden="true" />
+      {/* Soft white circles (Ellipse 13 / 12 / 10 — 30% opacity) */}
+      <span className="pointer-events-none absolute -left-[85px] -top-[92px] h-[321px] w-[321px] rounded-full bg-white/30" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[20%] top-1/2 h-[493px] w-[493px] rounded-full bg-white/30" aria-hidden="true" />
+      <span className="pointer-events-none absolute -top-[138px] left-[81%] h-[380px] w-[380px] rounded-full bg-white/30" aria-hidden="true" />
+
+      {/* Accent orbs: yellow→orange (Ellipse 49) and blue (Ellipse 51) */}
+      <span className="pointer-events-none absolute left-[18%] top-7 z-20 h-[53px] w-[53px] rounded-full bg-gradient-to-br from-[#FFED43] to-[#F29939] shadow-md" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[78%] top-[86%] h-[29px] w-[29px] rounded-full bg-gradient-to-br from-[#52B4DA] to-[#1E3E85]" aria-hidden="true" />
 
       <Container className="relative grid items-center gap-12 lg:grid-cols-2 lg:items-start lg:gap-8 lg:pt-[92px]">
         {/* Dashboard — bleeds off the left edge (and bottom) on desktop */}
