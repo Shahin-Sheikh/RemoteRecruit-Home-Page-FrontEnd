@@ -7,17 +7,13 @@ import { plans } from '../../data/pricing'
 /** A single pricing card (Free / Premium). */
 function PlanCard({ plan }) {
   return (
-    <div className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-black/5 sm:p-9">
+    <div className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-black/5 sm:p-7">
       <h3 className="sr-only">{plan.name} plan</h3>
-      <div className="flex flex-col gap-7 sm:flex-row sm:items-stretch sm:gap-6">
-        {/* Price / name block */}
-        <div
-          className={`flex flex-col justify-center rounded-2xl px-6 py-7 text-center sm:w-44 ${
-            plan.featured ? 'bg-brand-100' : 'bg-mist'
-          }`}
-        >
+      <div className="flex flex-col gap-7 sm:flex-row sm:items-stretch sm:gap-5">
+        {/* Price / name block — tag at top, price group centred below */}
+        <div className="flex flex-col items-center rounded-2xl bg-mist px-5 pt-3 pb-5 text-center sm:w-[196px] sm:min-h-[215px] sm:shrink-0">
           {plan.featured && (
-            <span className="mx-auto mb-3 inline-flex h-11 w-[146px] items-center justify-center gap-2 rounded-full bg-brand-200/70 text-sm font-semibold text-royal-700">
+            <span className="inline-flex h-11 w-[146px] items-center justify-center gap-2 rounded-full bg-brand-200/70 text-sm font-semibold text-royal-700">
               <img
                 src="/avatars/premium.webp"
                 alt=""
@@ -30,17 +26,19 @@ function PlanCard({ plan }) {
               {plan.tier}
             </span>
           )}
-          {plan.price ? (
-            <>
-              <p className="text-3xl font-bold text-[#2DBBDE]">{plan.price.amount}</p>
-              <p className="text-sm font-medium text-body">{plan.price.cadence}</p>
-            </>
-          ) : (
-            <>
-              <p className="text-3xl font-bold text-[#2DBBDE]">{plan.name}</p>
-              <p className="text-sm font-medium text-body">{plan.tier}</p>
-            </>
-          )}
+          <div className="flex flex-1 flex-col items-center justify-center">
+            {plan.price ? (
+              <>
+                <p className="text-[2rem] font-bold leading-tight text-[#2DBBDE]">{plan.price.amount}</p>
+                <p className="text-sm font-medium text-body">{plan.price.cadence}</p>
+              </>
+            ) : (
+              <>
+                <p className="text-[2rem] font-bold leading-tight text-[#2DBBDE]">{plan.name}</p>
+                <p className="text-sm font-medium text-body">{plan.tier}</p>
+              </>
+            )}
+          </div>
         </div>
 
         {/* Features */}
