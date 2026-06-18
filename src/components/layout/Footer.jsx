@@ -25,13 +25,13 @@ const footerBg = {
 
 export default function Footer() {
   return (
-    <footer className="relative min-h-[560px] overflow-hidden text-white" style={footerBg}>
+    <footer className="relative overflow-hidden text-white" style={footerBg}>
       {/* Faint white circle, top-right (Top Right Ellipses — 5% opacity) */}
       <span
         className="pointer-events-none absolute -top-[155px] left-[74%] h-[524px] w-[524px] rounded-full bg-white/[0.05]"
         aria-hidden="true"
       />
-      <Container className="relative flex min-h-[560px] flex-col pb-12 pt-20 lg:pt-24">
+      <Container className="relative pb-12 pt-16 lg:pt-20">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <a href="#top" className="focus-ring rounded-lg" aria-label="RemoteRecruit home">
             <Logo className="h-14 w-auto" />
@@ -52,16 +52,14 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Bottom block pushed to the foot */}
-        <div className="mt-auto">
-          {/* Full-width divider (breaks out of the centered container) */}
-          <div
-            className="relative left-1/2 w-screen -translate-x-1/2 border-t border-white/15"
-            aria-hidden="true"
-          />
-          <div className="flex flex-col items-center pt-10">
-            <Monogram className="h-12 w-12 drop-shadow-md" />
-          </div>
+        {/* Full-width divider (breaks out of the centered container) */}
+        <div
+          className="relative left-1/2 mt-20 w-screen -translate-x-1/2 border-t border-white/15"
+          aria-hidden="true"
+        />
+
+        <div className="flex flex-col items-center pt-10">
+          <Monogram className="h-12 w-12 drop-shadow-md" />
         </div>
       </Container>
     </footer>
