@@ -18,8 +18,8 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={heroBackground}>
       {/* Faint decorative discs */}
-      <span className="pointer-events-none absolute -left-40 -top-32 h-[480px] w-[480px] rounded-full bg-white/[0.05]" aria-hidden="true" />
-      <span className="pointer-events-none absolute -right-32 top-4 h-[620px] w-[620px] rounded-full bg-white/[0.04]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -left-40 -top-32 h-[460px] w-[460px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      <span className="pointer-events-none absolute right-[2%] top-[20%] h-[560px] w-[560px] rounded-full bg-white/[0.045]" aria-hidden="true" />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col items-center justify-center pb-36 pt-32 text-center sm:min-h-[680px] sm:pb-48 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
@@ -38,22 +38,22 @@ export default function Hero() {
         </SectionReveal>
       </Container>
 
-      {/* White wave divider — gentle hump cresting centre-right */}
+      {/* White wave divider — gentle hump cresting left-of-centre (~44%) */}
       <svg
-        className="absolute inset-x-0 bottom-[-1px] h-[12vw] min-h-[110px] w-full"
-        viewBox="0 0 1440 170"
+        className="absolute inset-x-0 bottom-[-1px] h-[15vw] min-h-[130px] w-full"
+        viewBox="0 0 1440 216"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
         <path
           fill="#ffffff"
-          d="M0 170V92C260 90 520 26 830 24C1110 22 1290 78 1440 86V170H0Z"
+          d="M0 216V128C200 124 430 20 630 14C920 6 1210 84 1440 122V216H0Z"
         />
       </svg>
 
       {/* Brighter blue circle layered over the wave at the bottom-left */}
       <span
-        className="pointer-events-none absolute -bottom-40 -left-40 h-[560px] w-[560px] rounded-full bg-[#2c6cb6]"
+        className="pointer-events-none absolute -bottom-24 -left-24 h-[360px] w-[360px] rounded-full bg-gradient-to-tl from-[#205ea8] to-[#3f93d2]"
         aria-hidden="true"
       />
     </section>
