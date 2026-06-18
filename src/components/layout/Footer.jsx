@@ -18,9 +18,9 @@ const SOCIALS = [
   { label: 'Snapchat', Icon: SnapchatIcon, href: '#' },
 ]
 
-// Exact Figma footer gradient (131.63deg, vertically flipped → 48.37deg).
+// Figma footer gradient — brightest top-left, darkest bottom-right.
 const footerBg = {
-  background: 'linear-gradient(48.37deg, #336DA6 6.87%, #1E3E85 106.04%)',
+  background: 'linear-gradient(131.63deg, #336DA6 6.87%, #1E3E85 106.04%)',
 }
 
 export default function Footer() {
