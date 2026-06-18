@@ -17,10 +17,16 @@ function PlanCard({ plan }) {
           }`}
         >
           {plan.featured && (
-            <span className="mx-auto mb-3 inline-flex items-center gap-1 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-semibold text-royal-700">
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
-                <path d="M12 2c1 3-1 4-1 6a3 3 0 006 0c0-1 0 0 0 0 2 2 3 4 3 7a8 8 0 11-16 0c0-4 3-6 4-8 1 2 2 2 4 0 0-2 0-3 0-5z" />
-              </svg>
+            <span className="mx-auto mb-3 inline-flex h-11 w-[146px] items-center justify-center gap-2 rounded-full bg-brand-200/70 text-sm font-semibold text-royal-700">
+              <img
+                src="/avatars/premium.webp"
+                alt=""
+                width={75}
+                height={120}
+                loading="lazy"
+                decoding="async"
+                className="h-6 w-auto"
+              />
               {plan.tier}
             </span>
           )}

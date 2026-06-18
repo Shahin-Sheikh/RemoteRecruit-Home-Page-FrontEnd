@@ -54,6 +54,7 @@ export default function Hero() {
         />
       </svg>
 
+ 
       {/* Light-Blue gradient layer, clipped to the bottom-left circle and laid
           over the wave (the bright cyan is sampled frame-relative). */}
       <div
