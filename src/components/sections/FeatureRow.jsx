@@ -13,10 +13,10 @@ export default function FeatureRow({ id, badge, title, children, visual, reverse
         {/* Copy */}
         <SectionReveal className={reverse ? 'lg:order-2' : ''}>
           <Badge>{badge}</Badge>
-          <h2 className="mt-5 max-w-md text-3xl font-bold leading-tight text-ink sm:text-4xl lg:text-[2.75rem]">
+          <h2 className="mt-6 max-w-lg font-medium text-[#11142D] text-[32px] leading-[42px] sm:text-[36px] sm:leading-[48px] lg:text-[40px] lg:leading-[52px]">
             {title}
           </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-body sm:text-lg">
+          <p className="mt-6 max-w-[480px] font-normal text-[17px] leading-[30px] text-[rgba(17,20,45,0.643)] sm:text-[19px] sm:leading-[35px]">
             {children}
           </p>
         </SectionReveal>
