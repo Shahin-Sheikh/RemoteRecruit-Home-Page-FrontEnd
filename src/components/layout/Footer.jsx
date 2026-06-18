@@ -18,9 +18,10 @@ const SOCIALS = [
   { label: 'Snapchat', Icon: SnapchatIcon, href: '#' },
 ]
 
-// Figma footer gradient — brightest top-left, darkest bottom-right.
+// Footer gradient — top matches the pricing wave (#336DA6) and darkens
+// straight down to #1E3E85, so the blue flows seamlessly (no seam at the join).
 const footerBg = {
-  background: 'linear-gradient(131.63deg, #336DA6 6.87%, #1E3E85 106.04%)',
+  background: 'linear-gradient(180deg, #336DA6 0%, #1E3E85 100%)',
 }
 
 export default function Footer() {
