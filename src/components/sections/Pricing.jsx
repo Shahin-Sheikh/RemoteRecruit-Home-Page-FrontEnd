@@ -77,11 +77,11 @@ function PlanCard({ plan }) {
 export default function Pricing() {
   return (
     <section id="pricing" className="relative overflow-hidden bg-white pt-16 sm:pt-20 lg:pt-24">
-      {/* Blue wash behind the cards' lower half — high on the left, sloping
-          down to the right (matches the Figma curve), flowing into the footer */}
-      <div className="absolute inset-x-0 bottom-0 h-[58%]" aria-hidden="true">
+      {/* Blue wash behind the cards — high on the left (curve near the left
+          card's middle), sloping down so the right card's base meets the curve */}
+      <div className="absolute inset-x-0 bottom-0 h-[62%]" aria-hidden="true">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="h-full w-full">
-          <path fill="#336DA6" d="M0 40C360 44 780 64 1100 86C1270 96 1380 104 1440 108V320H0V40Z" />
+          <path fill="#336DA6" d="M0 40C340 54 760 96 1100 132C1270 150 1380 160 1440 166V320H0V40Z" />
         </svg>
       </div>
 
