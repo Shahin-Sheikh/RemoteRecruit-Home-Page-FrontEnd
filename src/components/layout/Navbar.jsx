@@ -34,14 +34,14 @@ export default function Navbar() {
     >
       <Container className="flex items-center justify-between py-4 lg:py-5">
         <a href="#top" className="focus-ring rounded-lg" aria-label="RemoteRecruit home">
-          <Logo className="h-9 w-auto sm:h-11" />
+          <Logo className="h-9 w-auto sm:h-[50px]" />
         </a>
 
         <nav className="flex items-center gap-3 sm:gap-6" aria-label="Primary">
-          <Button variant="ghost" size="sm" href="#top" className="font-medium">
+          <Button variant="ghost" size="sm" href="#top" className="tracking-[0.4px] text-[#F5F7FE]">
             Sign In
           </Button>
-          <Button variant="cyan" size="sm" href="#pricing">
+          <Button variant="cyan" size="sm" href="#pricing" className="tracking-[0.4px]">
             Sign Up
           </Button>
         </nav>

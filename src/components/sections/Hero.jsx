@@ -20,19 +20,19 @@ const lightBlueBg = {
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={darkBlueBg}>
-      {/* Faint decorative discs */}
-      <span className="pointer-events-none absolute -left-40 -top-32 h-[440px] w-[440px] rounded-full bg-white/[0.05]" aria-hidden="true" />
-      <span className="pointer-events-none absolute -right-24 top-[24%] h-[460px] w-[460px] rounded-full bg-white/[0.04]" aria-hidden="true" />
+      {/* Faint decorative circles (Top Ellipses 2% / Bottom Ellipses 5%) */}
+      <span className="pointer-events-none absolute -left-[6px] -top-[367px] h-[524px] w-[524px] rounded-full bg-white/[0.02]" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[44%] top-[53%] h-[524px] w-[524px] rounded-full bg-white/[0.05]" aria-hidden="true" />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col items-center justify-center pb-36 pt-32 text-center sm:min-h-[680px] sm:pb-48 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.75rem]">
+          <h1 className="mx-auto max-w-4xl font-bold text-white text-[36px] leading-[44px] sm:text-[44px] sm:leading-[56px] lg:text-[53px] lg:leading-[68px]">
             RemoteRecruit&rsquo;s Difference
           </h1>
         </SectionReveal>
 
         <SectionReveal immediate>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-[800px] font-medium text-white/80 text-[17px] leading-[28px] sm:text-[20px] sm:leading-[32px]">
             RemoteRecruit is connecting the world with an easy-to-use platform that lets
             full-time, part-time, and freelance workers showcase their talents to businesses
             that need them. With no paywalls, no fees, and no barriers, there&rsquo;s nothing but
