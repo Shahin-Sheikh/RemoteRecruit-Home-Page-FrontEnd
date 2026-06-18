@@ -24,7 +24,7 @@ export default function JobBoardMockup() {
       <div className="flex">
         {/* Sidebar */}
         <aside className="hidden w-32 shrink-0 flex-col bg-royal-800 p-4 text-white sm:flex">
-          <Logo tone="light" className="text-sm" />
+          <Logo className="h-6 w-auto" />
           <p className="mt-6 text-[9px] uppercase tracking-wider text-white/40">Pages</p>
           <nav className="mt-3 space-y-1.5">
             {NAV.map((item, i) => (

@@ -26,12 +26,12 @@ function PlanCard({ plan }) {
           )}
           {plan.price ? (
             <>
-              <p className="text-3xl font-bold text-brand-700">{plan.price.amount}</p>
+              <p className="text-3xl font-bold text-[#2DBBDE]">{plan.price.amount}</p>
               <p className="text-sm font-medium text-body">{plan.price.cadence}</p>
             </>
           ) : (
             <>
-              <p className="text-3xl font-bold text-brand-700">{plan.name}</p>
+              <p className="text-3xl font-bold text-[#2DBBDE]">{plan.name}</p>
               <p className="text-sm font-medium text-body">{plan.tier}</p>
             </>
           )}

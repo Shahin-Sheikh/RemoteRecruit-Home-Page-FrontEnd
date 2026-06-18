@@ -35,7 +35,7 @@ export default function MembershipVisual() {
       </div>
 
       {/* Brand monogram */}
-      <Monogram className="absolute -right-3 top-7 h-14 w-14 text-xl ring-4 ring-white" />
+      <Monogram className="absolute -right-4 top-7 h-16 w-16 drop-shadow-lg" />
 
       {/* Floating payment pill */}
       <div className="absolute -bottom-1 left-1/2 flex w-72 -translate-x-1/2 items-center gap-3 rounded-2xl bg-white p-3 shadow-card ring-1 ring-black/5">

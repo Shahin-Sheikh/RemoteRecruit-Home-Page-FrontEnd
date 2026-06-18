@@ -103,8 +103,8 @@ Measured with Lighthouse (production build via `npm run preview`):
 
 | Profile  | Performance | Accessibility | Best Practices | SEO |
 | -------- | :---------: | :-----------: | :------------: | :-: |
-| Mobile   |     96      |      100      |      100       | 100 |
-| Desktop  |     100     |      100      |      100       | 100 |
+| Mobile   |     100     |      96       |      100       | 100 |
+| Desktop  |     100     |      96       |      100       | 100 |
 
 - React split into a cached vendor chunk; app code ~10 KB gzip, CSS ~6 KB gzip.
 - Fonts preconnected + loaded async (preload→swap) so they never block paint;
@@ -126,9 +126,9 @@ Measured with Lighthouse (production build via `npm run preview`):
 - Navigation links, social links and CTA buttons are **non-functional anchors**
   (`#`) — this is a single marketing page with no backend or routing.
 - FAQ content is **placeholder** (lorem-style) text, matching the design.
-- The primary cyan CTA colour is slightly **deeper than the Figma swatch** so
-  white button text clears WCAG AA contrast (the original bright cyan failed at
-  ~2.3:1). Bright cyan is retained everywhere it’s used decoratively.
+- To stay faithful to the Figma, the bright cyan **"Sign Up" / accent** colour is
+  kept as-designed; white-on-cyan is below the WCAG AA text-contrast bar, which is
+  the single item keeping the Lighthouse accessibility score at 96 rather than 100.
 
 ## 📜 Scripts
 

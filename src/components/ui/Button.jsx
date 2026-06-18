@@ -3,8 +3,8 @@
  * variants. Renders an <a> when `href` is supplied, otherwise a <button>.
  */
 const VARIANTS = {
-  // Solid cyan pill (navbar "Sign Up") — accessible CTA cyan for AA contrast
-  cyan: 'bg-cta text-white hover:bg-cta-dark shadow-pill hover:-translate-y-0.5',
+  // Solid cyan pill (navbar "Sign Up") — Figma brand cyan
+  cyan: 'bg-[#2DBBDE] text-white hover:bg-[#1ea7ca] shadow-pill hover:-translate-y-0.5',
   // Solid royal-blue gradient (pricing "Get Started")
   primary:
     'bg-gradient-to-r from-royal-600 to-brand-500 text-white hover:from-royal-700 hover:to-brand-600 shadow-soft hover:-translate-y-0.5',

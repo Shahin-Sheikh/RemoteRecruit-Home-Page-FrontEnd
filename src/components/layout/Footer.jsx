@@ -28,7 +28,7 @@ export default function Footer() {
       <Container className="py-12 lg:py-16">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <a href="#top" className="focus-ring rounded-lg" aria-label="RemoteRecruit home">
-            <Logo tone="light" className="text-3xl" />
+            <Logo className="h-14 w-auto" />
           </a>
 
           <ul className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/15 pt-10">
-          <Monogram className="h-11 w-11 text-lg" />
+          <Monogram className="h-12 w-12 drop-shadow-md" />
           <p className="text-xs text-white/75">
             &copy; {new Date().getFullYear()} RemoteRecruit. All rights reserved.
           </p>

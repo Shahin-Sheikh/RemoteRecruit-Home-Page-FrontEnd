@@ -32,11 +32,6 @@ export default {
           900: '#1b2056',
         },
         mist: '#f5f7ff', // light lavender section background
-        // Accessible CTA cyan — deep enough for white text to clear WCAG AA (4.7:1)
-        cta: {
-          DEFAULT: '#0f7e95',
-          dark: '#0b6a7f',
-        },
       },
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],

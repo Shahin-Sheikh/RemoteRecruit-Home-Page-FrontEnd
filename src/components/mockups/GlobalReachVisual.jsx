@@ -90,7 +90,7 @@ export default function GlobalReachVisual() {
       </div>
 
       {/* Brand monogram */}
-      <Monogram className="absolute -right-4 top-24 h-16 w-16 text-2xl ring-4 ring-white" />
+      <Monogram className="absolute -right-5 top-24 h-20 w-20 drop-shadow-lg" />
 
       {/* Floating candidate cards */}
       <PersonCard

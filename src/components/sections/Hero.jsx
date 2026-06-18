@@ -1,26 +1,27 @@
 import Container from '../ui/Container'
 import SectionReveal from '../ui/SectionReveal'
 
+// Royal-blue hero gradient sampled from the Figma background (1440×704).
 const heroBackground = {
   backgroundImage: [
-    'radial-gradient(55% 55% at 16% 12%, rgba(120,124,214,0.55) 0%, rgba(120,124,214,0) 60%)',
-    'radial-gradient(45% 42% at 52% 88%, rgba(126,170,224,0.45) 0%, rgba(126,170,224,0) 62%)',
-    'linear-gradient(135deg, #34307f 0%, #2b3a8c 45%, #2a5ba6 100%)',
+    'radial-gradient(60% 55% at 50% 16%, rgba(92,118,205,0.38) 0%, rgba(92,118,205,0) 60%)',
+    'linear-gradient(158deg, #283890 0%, #31499f 52%, #345aa6 100%)',
   ].join(', '),
 }
 
 /**
- * Hero — "RemoteRecruit's Difference". Dark indigo gradient with floating
- * decorative orbs and a white wave that blends into the next section.
+ * Hero — "RemoteRecruit's Difference". Royal-blue gradient with large
+ * translucent orbs and a white wave that blends into the next section.
  */
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={heroBackground}>
-      {/* Decorative orbs */}
-      <span className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-white/5 blur-2xl" aria-hidden="true" />
-      <span className="pointer-events-none absolute right-10 top-1/3 h-40 w-40 rounded-full bg-brand-300/10 blur-2xl" aria-hidden="true" />
+      {/* Decorative orbs (match the Figma circles) */}
+      <span className="pointer-events-none absolute -left-28 -top-28 h-[440px] w-[440px] rounded-full bg-white/[0.05]" aria-hidden="true" />
+      <span className="pointer-events-none absolute bottom-[-32%] left-1/2 h-[720px] w-[720px] -translate-x-1/2 rounded-full bg-[#4163ad]/25" aria-hidden="true" />
+      <span className="pointer-events-none absolute -left-24 bottom-[-12%] h-80 w-80 rounded-full bg-[#2f72b0]/35 blur-[1px]" aria-hidden="true" />
 
-      <Container className="relative flex min-h-[600px] flex-col items-center justify-center pb-32 pt-32 text-center sm:min-h-[88vh] sm:pb-48 sm:pt-36 lg:min-h-[92vh]">
+      <Container className="relative flex min-h-[600px] flex-col items-center justify-center pb-32 pt-32 text-center sm:min-h-[680px] sm:pb-44 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.75rem]">
             RemoteRecruit&rsquo;s Difference
@@ -28,7 +29,7 @@ export default function Hero() {
         </SectionReveal>
 
         <SectionReveal immediate>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
             RemoteRecruit is connecting the world with an easy-to-use platform that lets
             full-time, part-time, and freelance workers showcase their talents to businesses
             that need them. With no paywalls, no fees, and no barriers, there&rsquo;s nothing but
