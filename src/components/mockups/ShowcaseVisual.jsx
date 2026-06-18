@@ -1,110 +1,83 @@
 import LazyImage from '../ui/LazyImage'
-import { PlayIcon, CheckCircleIcon } from '../ui/icons'
+import { PlayIcon } from '../ui/icons'
 
 const SKILLS = ['Python Dev', 'Javascript', 'Front End', 'Back End', 'IOS Development']
 
 /**
- * Candidate profile mockup with a stats banner, an intro-video thumbnail, skill
- * tags and a floating client-feedback card — beside the Showcase Your Talents copy.
+ * Showcase profile illustration: the real "Your Profile" export inside a white
+ * card, with an intro-video play button, a large round avatar on the right
+ * edge, a floating client-feedback card and skill tags (matching Figma).
  */
 export default function ShowcaseVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-md pb-16" aria-hidden="true">
-      <div className="rounded-3xl bg-white p-5 shadow-card ring-1 ring-black/5">
-        {/* Stats banner */}
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-royal-700 to-royal-500 p-4">
-          <p className="text-sm font-bold text-white">102 Jobs Completed!</p>
-          <p className="text-[10px] text-white/70">$100,000 Earned over 12 Months</p>
-          <span
-            className="absolute -right-2 -top-3 h-20 w-20 rounded-full bg-gradient-to-br from-fuchsia-400 to-violet-500 blur-[2px]"
-            aria-hidden="true"
-          />
-        </div>
+    <div className="relative mx-auto w-full max-w-md pb-6" aria-hidden="true">
+      {/* Accent dot */}
+      <span className="absolute left-4 -top-1 z-10 h-[18px] w-[18px] rounded-full bg-gradient-to-br from-brand-400 to-royal-600 shadow-md" />
 
-        {/* Profile row with intro-video thumbnail */}
-        <div className="mt-4 flex items-center gap-3">
-          <div className="relative">
-            <LazyImage
-              src="/avatars/dylan.svg"
-              alt=""
-              width={56}
-              height={56}
-              wrapperClassName="h-14 w-14 rounded-full"
-              className="h-14 w-14 rounded-full object-cover"
-            />
-            <span className="absolute inset-0 flex items-center justify-center">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-500/90 text-white shadow">
-                <PlayIcon className="h-3.5 w-3.5" />
-              </span>
-            </span>
-          </div>
-          <div className="flex-1 leading-tight">
-            <p className="flex items-center gap-1 text-sm font-bold text-ink">
-              Dylan M.
-              <CheckCircleIcon className="h-4 w-4 text-brand-500" />
-            </p>
-            <p className="text-[11px] text-body">Front End Dev</p>
-          </div>
-          <span className="rounded-full bg-royal-50 px-3 py-1 text-[10px] font-semibold text-royal-600">
-            Edit Profile
-          </span>
-        </div>
-
-        {/* Tabs */}
-        <div className="mt-4 flex gap-4 border-b border-black/5 pb-2 text-[11px] font-medium text-body">
-          <span className="border-b-2 border-brand-500 pb-1 text-ink">About</span>
-          <span>Reviews</span>
-          <span>Portfolio</span>
-        </div>
-
-        {/* Bio lines */}
-        <div className="mt-3 space-y-1.5">
-          <div className="h-1.5 w-3/4 rounded bg-royal-50" />
-          <div className="h-1.5 w-full rounded bg-royal-50" />
-          <div className="h-1.5 w-2/3 rounded bg-royal-50" />
-        </div>
-
-        {/* Skill tags */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {SKILLS.map((s) => (
-            <span
-              key={s}
-              className="rounded-lg bg-royal-50 px-2.5 py-1 text-[10px] font-semibold text-royal-600"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
+      {/* White card: profile image on top, white space below for tags */}
+      <div className="overflow-hidden rounded-[28px] bg-white shadow-card ring-1 ring-black/5">
+        <LazyImage
+          src="/avatars/showcase_image.webp"
+          alt=""
+          width={940}
+          height={913}
+          wrapperClassName="block aspect-[10/9] w-full"
+          className="h-full w-full object-cover object-top"
+        />
+        <div className="h-32 w-full bg-white" />
       </div>
 
-      {/* Floating client-feedback card */}
-      <div className="absolute -bottom-6 -left-4 flex w-64 items-center gap-3 rounded-2xl bg-white p-3 shadow-card ring-1 ring-black/5 animate-float">
-        <LazyImage
-          src="/avatars/client.svg"
+      {/* Intro-video play button over the profile */}
+      <span className="absolute left-[56%] top-[24%] flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(82,180,218,0.5)] text-white shadow-lg backdrop-blur-sm">
+        <PlayIcon className="h-5 w-5" />
+      </span>
+
+      {/* Large round avatar on the right edge */}
+      <span className="absolute -right-3 top-[34%] h-[88px] w-[88px] overflow-hidden rounded-full shadow-card ring-4 ring-[#1f6fb6]">
+        <img
+          src="/avatars/avatar.webp"
           alt=""
-          width={44}
-          height={44}
-          wrapperClassName="h-11 w-11 shrink-0 rounded-full ring-2 ring-amber-400"
-          className="h-11 w-11 rounded-full object-cover"
+          width={88}
+          height={88}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover object-[58%_22%]"
         />
+      </span>
+
+      {/* Floating "Past Client Feedback" card */}
+      <div className="absolute left-[-4%] top-[48%] flex w-[70%] items-center gap-3 rounded-[20px] bg-white p-3 shadow-card ring-1 ring-black/5 animate-float">
+        <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-400">
+          <img
+            src="/avatars/avatar.webp"
+            alt=""
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
+            className="h-12 w-12 object-cover object-[58%_22%]"
+          />
+        </span>
         <div className="leading-tight">
-          <p className="text-[11px] font-semibold text-brand-600">Past Client Feedback</p>
+          <p className="text-xs font-semibold text-brand-600">Past Client Feedback</p>
           <p className="text-sm font-bold text-ink">Best Developer Ever!</p>
         </div>
       </div>
 
-      {/* Large floating avatar (outer span owns the absolute positioning so it
-          doesn't collide with LazyImage's own `relative` wrapper) */}
-      <span className="absolute -right-5 top-28 h-[72px] w-[72px] animate-float rounded-full shadow-card ring-4 ring-white [animation-delay:1s]">
-        <LazyImage
-          src="/avatars/dylan.svg"
-          alt=""
-          width={72}
-          height={72}
-          wrapperClassName="h-full w-full rounded-full"
-          className="h-[72px] w-[72px] rounded-full object-cover"
-        />
-      </span>
+      {/* Skill tags on the white area */}
+      <div className="absolute inset-x-7 bottom-7 flex flex-wrap gap-2.5">
+        {SKILLS.map((s) => (
+          <span
+            key={s}
+            className="rounded-lg bg-royal-50 px-3 py-1.5 text-xs font-semibold text-royal-600"
+          >
+            {s}
+          </span>
+        ))}
+        <span className="rounded-lg bg-royal-50 px-3 py-1.5 text-xs font-semibold text-royal-600">
+          +12
+        </span>
+      </div>
     </div>
   )
 }
