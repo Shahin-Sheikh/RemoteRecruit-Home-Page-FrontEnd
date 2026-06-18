@@ -22,8 +22,8 @@ export default function HelpCTA() {
       <span className="pointer-events-none absolute -top-[138px] left-[81%] h-[380px] w-[380px] rounded-full bg-white/30" aria-hidden="true" />
 
       {/* Accent orbs: yellow→orange (Ellipse 49) and blue (Ellipse 51) */}
-      <span className="pointer-events-none absolute left-[18%] top-7 z-20 h-[53px] w-[53px] rounded-full bg-gradient-to-br from-[#FFED43] to-[#F29939] shadow-md" aria-hidden="true" />
-      <span className="pointer-events-none absolute left-[78%] top-[86%] h-[29px] w-[29px] rounded-full bg-gradient-to-br from-[#52B4DA] to-[#1E3E85]" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[18%] top-7 z-20 h-[53px] w-[53px] rounded-full bg-[linear-gradient(132.56deg,#FFED43_5.63%,#F29939_106.18%)] shadow-md" aria-hidden="true" />
+      <span className="pointer-events-none absolute left-[78%] top-[86%] h-[29px] w-[29px] rounded-full bg-[linear-gradient(132.56deg,#52B4DA_5.63%,#1E3E85_106.18%)]" aria-hidden="true" />
 
       <Container className="relative grid items-center gap-12 lg:grid-cols-2 lg:items-start lg:gap-8 lg:pt-[92px]">
         {/* Dashboard — bleeds off the left edge (and bottom) on desktop */}
