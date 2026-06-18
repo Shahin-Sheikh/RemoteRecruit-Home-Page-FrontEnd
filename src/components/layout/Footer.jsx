@@ -52,7 +52,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/15 pt-10">
+        {/* Full-width divider (breaks out of the centered container) */}
+        <div
+          className="relative left-1/2 mt-12 w-screen -translate-x-1/2 border-t border-white/15"
+          aria-hidden="true"
+        />
+
+        <div className="flex flex-col items-center gap-4 pt-10">
           <Monogram className="h-12 w-12 drop-shadow-md" />
         </div>
       </Container>
