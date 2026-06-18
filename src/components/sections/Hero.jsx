@@ -17,9 +17,9 @@ const heroBackground = {
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden" style={heroBackground}>
-      {/* Faint decorative discs */}
-      <span className="pointer-events-none absolute -left-40 -top-32 h-[460px] w-[460px] rounded-full bg-white/[0.05]" aria-hidden="true" />
-      <span className="pointer-events-none absolute right-[2%] top-[20%] h-[560px] w-[560px] rounded-full bg-white/[0.045]" aria-hidden="true" />
+      {/* Faint decorative discs (subtle, so they don't compete with the wave) */}
+      <span className="pointer-events-none absolute -left-40 -top-32 h-[440px] w-[440px] rounded-full bg-white/[0.04]" aria-hidden="true" />
+      <span className="pointer-events-none absolute -right-24 top-[24%] h-[460px] w-[460px] rounded-full bg-white/[0.035]" aria-hidden="true" />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col items-center justify-center pb-36 pt-32 text-center sm:min-h-[680px] sm:pb-48 sm:pt-36 lg:min-h-[704px]">
         <SectionReveal immediate>
@@ -48,7 +48,7 @@ export default function Hero() {
       >
         <path
           fill="#ffffff"
-          d="M0 216V128C200 124 470 24 690 18C960 8 1230 86 1440 122V216H0Z"
+          d="M0 216V120C240 116 460 30 660 26C920 21 1200 70 1440 92V216H0Z"
         />
       </svg>
 
@@ -56,7 +56,7 @@ export default function Hero() {
           forms the whole left half of the bottom curve (matches Figma). Large
           on desktop, modest on mobile. */}
       <span
-        className="pointer-events-none absolute -bottom-40 -left-40 h-[440px] w-[440px] rounded-full bg-gradient-to-bl from-[#1f5499] to-[#3a97d4] lg:-bottom-[686px] lg:-left-[420px] lg:h-[1020px] lg:w-[1020px]"
+        className="pointer-events-none absolute -bottom-32 -left-32 h-[380px] w-[380px] rounded-full bg-gradient-to-bl from-[#1f5499] to-[#3a97d4] lg:-bottom-[486px] lg:-left-[330px] lg:h-[780px] lg:w-[780px]"
         aria-hidden="true"
       />
     </section>
